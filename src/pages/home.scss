@@ -1,5 +1,9 @@
 @import "../scss/index.scss";
 
 .home {
-  background-color: $primary-color;
+  .img {
+    img {
+      width: 100%;
+    }
+  }
 }

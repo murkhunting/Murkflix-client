@@ -31,7 +31,7 @@ function List() {
         <MdArrowBackIos
           className="sliderArrow left"
           onClick={() => handleClick("left")}
-          style={{ display: !isMoved && "none" }}
+          //   style={{ display: !isMoved && "none" }}
         />
         <div className="container" ref={listRef}>
           <ListItem index={0} />

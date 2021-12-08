@@ -13,16 +13,6 @@
     object-fit: cover;
   }
 
-  video {
-    width: 100%;
-    height: 140px;
-    object-fit: cover;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 99;
-  }
-
   &:hover {
     width: 325px;
     height: 300px;
@@ -30,6 +20,49 @@
     top: -150px;
     img {
       display: none;
+    }
+
+    .itemInfo {
+      display: flez;
+      flex-direction: column;
+      padding: 10px;
+
+      .icons {
+        display: flex;
+        margin-bottom: 10px;
+
+        .icon {
+          border: 1px solid white;
+          padding: 5px;
+          border-radius: 50%;
+          margin-right: 10px;
+          font-size: 14px;
+        }
+      }
+
+      .itemInfoTop {
+        display: flex;
+        align-items: center;
+        margin-bottom: 10px;
+        font-size: 13px;
+        color: gray;
+
+        .limit {
+          border: 1px solid grey;
+          padding: 1px 3px;
+          margin: 0 10px;
+        }
+      }
+
+      .desc {
+        font-size: 13px;
+        margin-bottom: 10px;
+      }
+
+      .genre {
+        font-size: 14px;
+        color: lightgray;
+      }
     }
   }
 }

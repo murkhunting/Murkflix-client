@@ -12,6 +12,12 @@ const Home = () => {
       {/* <img src={foto} alt="" /> */}
       <Featured className="img" type="movie" />
       <List />
+      <List />
+      <List />
+      <List />
+      <List />
+      <List />
+      <List />
     </div>
   );
 };

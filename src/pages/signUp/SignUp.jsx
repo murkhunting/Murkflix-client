@@ -22,15 +22,14 @@ function SignUp() {
       <div className="top">
         <div className="wrapper">
           <img className="logo" src={images.logo1} alt="" />
-          <button className="login">LOGIN</button>
         </div>
       </div>
       <div className="container">
         <h1>UNLIMITED MOVIES, TV SHOWS AND MORE.</h1>
         <h2>Watch anywhere. Cancel anytime.</h2>
         <p>
-          Ready to enter the biggest video platform? Enter your email to create
-          your account.
+          Ready for the biggest video platform? Enter your email to create your
+          account.
         </p>
         {!email ? (
           <div className="input">
@@ -51,6 +50,9 @@ function SignUp() {
             </button>
           </form>
         )}
+        <span>
+          Already have an account? <b>Click here to Login!</b>
+        </span>
       </div>
     </div>
   );

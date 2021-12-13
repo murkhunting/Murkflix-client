@@ -17,20 +17,10 @@
       padding: 20px 50px;
       display: flex;
       align-items: center;
-      justify-content: space-between;
+      justify-content: center;
 
       .logo {
-        height: 20vw;
-      }
-
-      .login {
-        background-color: $secondary-color;
-        border: none;
-        color: white;
-        border-radius: 5px;
-        padding: 5px 15px;
-        font-size: 16px;
-        font-weight: 500;
+        height: 200px;
       }
     }
   }
@@ -84,6 +74,13 @@
         color: white;
         font-size: 16px;
         font-weight: 500;
+      }
+    }
+    span {
+      padding-top: 20px;
+      color: lightgray;
+      b {
+        color: white;
       }
     }
   }

@@ -5,6 +5,7 @@ import { useState } from "react";
 import { BsSearch } from "react-icons/bs";
 import { IoIosNotifications } from "react-icons/io";
 import { MdArrowDropDown } from "react-icons/md";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -19,11 +20,17 @@ const Navbar = () => {
       <div className="container">
         <div className="left">
           <img src={images.logo1} alt="" />
-          <span>HOME</span>
-          <span>SERIES</span>
-          <span>MOVIES</span>
-          <span>NEW & POPULAR</span>
-          <span>MY LIST</span>
+          <Link to="/" className="link">
+            <span>Home</span>
+          </Link>
+          <Link to="/series" className="link">
+            <span>Series</span>
+          </Link>
+          <Link to="/movies" className="link">
+            <span>MOovies</span>
+          </Link>
+          <span>New & Popular</span>
+          <span>My List</span>
         </div>
         <div className="right">
           <BsSearch className="icon" />

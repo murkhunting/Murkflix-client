@@ -9,6 +9,7 @@ import axios from "axios";
 const Home = ({ type }) => {
   const [lists, setLists] = useState([]);
   const [genre, setGenre] = useState(null);
+  console.log(setGenre);
 
   useEffect(() => {
     const getRandomLists = async () => {

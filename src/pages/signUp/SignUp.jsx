@@ -5,6 +5,7 @@ import images from "../../assets/images";
 function SignUp() {
   const [email, setEmail] = useState();
   const [password, setPassword] = useState();
+  console.log(password);
 
   const emailRef = useRef();
   const passwordRef = useRef();

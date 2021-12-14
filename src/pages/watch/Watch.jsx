@@ -1,20 +1,20 @@
 import React from "react";
 import "./watch.scss";
 import { IoArrowBack } from "react-icons/io5";
+import { Link, useLocation } from "react-router-dom";
 
 function Watch() {
+  const location = useLocation();
+  const movie = location.movie;
   return (
     <div className="watch">
-      <div className="back">
-        <IoArrowBack />
-      </div>
-      <video
-        className="video"
-        autoPlay
-        progress
-        controls
-        src="https://vimeo.com/118635227"
-      />
+      <Link to="/">
+        <div className="back">
+          <IoArrowBack />
+          Home
+        </div>
+      </Link>
+      <video className="video" autoPlay progress controls src="" />
     </div>
   );
 }

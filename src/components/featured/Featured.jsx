@@ -2,8 +2,29 @@ import React from "react";
 import "./featured.scss";
 import { BsPlayCircle } from "react-icons/bs";
 import { AiOutlineInfoCircle } from "react-icons/ai";
+import { useState, useEffect } from "react";
+import axios from "axios";
 
 function Featured({ type }) {
+  const [random, setRandom] = useState({});
+
+  useEffect(() => {
+    const getRandomContent = async () => {
+      try {
+        const res = await axios.get(`/movies/random?type=${type}`, {
+          headers: {
+            token:
+              "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxYjUwYjJhMzVmNDAzNzI2N2NjNmI5OCIsImlzQWRtaW4iOnRydWUsImlhdCI6MTYzOTQ2ODQxOCwiZXhwIjoxNjM5OTAwNDE4fQ.M8Wt893QE4srmzz0whCu4FbQOefD9UHDm4FjS8mGSmk",
+          },
+        });
+        setRandom(res.data[0]);
+      } catch (err) {
+        console.log(err);
+      }
+    };
+    getRandomContent();
+  }, [type]);
+
   return (
     <div className="featured">
       {type && (
@@ -26,18 +47,10 @@ function Featured({ type }) {
           </select>
         </div>
       )}
-      <img src="https://i.blogs.es/8b8798/06-06-matrix/1366_2000.jpg" alt="" />
+      <img src={random.img} alt="" />
       <div className="info">
-        <h1 className="title">TÍTULO</h1>
-        <span className="desc">
-          Descripción: Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-          sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-          enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
-          ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-          culpa qui officia deserunt mollit anim id est laborum.
-        </span>
+        <h1 className="title">{random.title}</h1>
+        <span className="desc">{random.desc}</span>
         <div className="buttons">
           <button className="play">
             <BsPlayCircle />

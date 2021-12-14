@@ -1,15 +1,35 @@
 import React from "react";
 import ReactPlayer from "react-player";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import "./listItem.scss";
 import { BsFillPlayFill } from "react-icons/bs";
 import { IoAdd } from "react-icons/io5";
 import { AiOutlineLike } from "react-icons/ai";
 import { AiOutlineDislike } from "react-icons/ai";
+import axios from "axios";
 
 const ListItem = ({ index, item }) => {
   const [isHovered, setIsHovered] = useState(false);
-  console.log(item);
+  const [movie, setMovie] = useState({});
+  console.log(movie);
+
+  useEffect(() => {
+    const getMovie = async () => {
+      try {
+        const res = await axios.get("/movies/find/" + item, {
+          headers: {
+            token:
+              "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxYjUwYjJhMzVmNDAzNzI2N2NjNmI5OCIsImlzQWRtaW4iOnRydWUsImlhdCI6MTYzOTQ2ODQxOCwiZXhwIjoxNjM5OTAwNDE4fQ.M8Wt893QE4srmzz0whCu4FbQOefD9UHDm4FjS8mGSmk",
+          },
+        });
+        setMovie(res.data);
+      } catch (err) {
+        console.log(err);
+      }
+    };
+    getMovie();
+  }, [item]);
+
   return (
     <div
       className="listItem"
@@ -17,14 +37,11 @@ const ListItem = ({ index, item }) => {
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
-      <img
-        src="https://1.bp.blogspot.com/-A68HoMwhsGM/WIyXFmQI7vI/AAAAAAAAASw/4I-DCI0O9BI0v46i6pQkWOn6yFHzO_IMQCLcB/s1600/aCyq3nI.png"
-        alt=""
-      />
+      <img src={movie.img} alt="" />
       {isHovered && (
         <>
           <ReactPlayer
-            url="https://vimeo.com/118635227"
+            url={movie.trailer}
             width="100%"
             height="150px"
             autoPlay={true}
@@ -41,15 +58,12 @@ const ListItem = ({ index, item }) => {
               <AiOutlineDislike className="icon" />
             </div>
             <div className="itemInfoTop">
-              <span>1 hour 14 mins</span>
-              <span className="limit">+16</span>
-              <span>1999</span>
+              <span>{movie.duration}</span>
+              <span className="limit">+{movie.limit}</span>
+              <span>{movie.year}</span>
             </div>
-            <div className="desc">
-              Descripción: Lorem ipsum dolor sit amet, consectetur adipiscing
-              elit, sed do eiusmod tempor incididunt...
-            </div>
-            <div className="genre">Action</div>
+            <div className="desc">{movie.description}</div>
+            <div className="genre">{movie.genre}</div>
           </div>
         </>
       )}

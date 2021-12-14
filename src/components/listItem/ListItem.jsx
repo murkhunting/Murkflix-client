@@ -7,9 +7,9 @@ import { IoAdd } from "react-icons/io5";
 import { AiOutlineLike } from "react-icons/ai";
 import { AiOutlineDislike } from "react-icons/ai";
 
-const ListItem = ({ index }) => {
+const ListItem = ({ index, item }) => {
   const [isHovered, setIsHovered] = useState(false);
-
+  console.log(item);
   return (
     <div
       className="listItem"

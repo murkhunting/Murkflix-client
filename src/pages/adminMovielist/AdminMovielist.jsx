@@ -3,10 +3,19 @@ import "./adminMovielist.scss";
 import images from "../../assets/images";
 import { BrowserRouter, Link } from "react-router-dom";
 import { FaRegTrashAlt } from "react-icons/fa";
+import { IoChevronBack } from "react-icons/io5";
 
 function adminMovielist() {
   return (
     <div className="adminmovielist">
+      <BrowserRouter>
+        <Link to="/admin" className="link">
+          <div className="back">
+            <IoChevronBack />
+            Back to Admin
+          </div>
+        </Link>
+      </BrowserRouter>
       <div className="top">
         <div className="wrapper">
           <img className="logo" src={images.logo1} alt="" />

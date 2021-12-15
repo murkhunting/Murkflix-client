@@ -38,21 +38,26 @@
   }
 
   .container {
-    width: 550px;
+    width: 800px;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    justify-content: space-around;
+    align-items: center;
+    padding-top: 20px;
     color: white;
     background-color: rgb(0, 0, 0, 0.4);
     border-radius: 10px;
 
+    hr {
+      width: 500px;
+      border-color: gray;
+    }
     .cover {
       width: 100%;
       display: flex;
-      align-items: flex-start;
+      align-items: flex-end;
       justify-content: space-around;
       margin: 20px 0;
+      border-bottom: 1px solid rgb(43, 43, 43);
 
       .title {
         width: 100%;

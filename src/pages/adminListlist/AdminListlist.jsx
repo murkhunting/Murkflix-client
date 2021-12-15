@@ -10,7 +10,7 @@ function AdminListlist() {
       <div className="top">
         <div className="wrapper">
           <img className="logo" src={images.logo1} alt="" />
-          <h1>ALL LISTS PANEL</h1>
+          <h1>MURKFLIX LISTS PANEL</h1>
         </div>
       </div>
       <div className="container">
@@ -28,6 +28,7 @@ function AdminListlist() {
               </button>
             </div>
           </div>
+
           <div className="cover">
             <div className="title">
               <h2>Total Action Movies</h2>

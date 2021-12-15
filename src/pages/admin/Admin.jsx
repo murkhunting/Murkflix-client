@@ -1,6 +1,9 @@
 import React from "react";
 import "./admin.scss";
 import images from "../../assets/images";
+import { BsPlayCircle } from "react-icons/bs";
+import { BsCardList } from "react-icons/bs";
+import { BrowserRouter, Link } from "react-router-dom";
 
 function Admin() {
   return (
@@ -12,10 +15,26 @@ function Admin() {
         </div>
       </div>
       <div className="container">
-        <h2>EDIT ALL MOVIES</h2>
-        <button className="loginbutton">CREATE NEW MOVIE</button>
-        <h2>EDIT ALL LISTS</h2>
-        <button className="loginbutton">CREATE NEW LIST</button>
+        <BrowserRouter>
+          <Link to="/admin/movielist" className="link">
+            <div className="cover">
+              <BsPlayCircle className="icon" />
+              <h2>ALL MOVIES</h2>
+            </div>
+          </Link>
+          <Link to="/admin/movienew" className="link">
+            <button className="loginbutton">CREATE NEW MOVIE</button>
+          </Link>
+          <Link to="/admin/listlist" className="link">
+            <div className="cover">
+              <BsCardList className="icon" />
+              <h2>ALL LISTS</h2>
+            </div>
+          </Link>
+          <Link to="/admin/listnew" className="link">
+            <button className="loginbutton">CREATE NEW LIST</button>
+          </Link>
+        </BrowserRouter>
       </div>
     </div>
   );

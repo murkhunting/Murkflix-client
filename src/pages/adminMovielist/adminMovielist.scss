@@ -1,0 +1,93 @@
+@import "../../scss/index.scss";
+
+.adminmovielist {
+  width: 100%;
+
+  background-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0) 0%,
+      rgba(0, 0, 0, 1) 100%
+    ),
+    url("https://cdn.cnn.com/cnnnext/dam/assets/141007105341-cnn-films-background-full-169.jpg");
+  background-size: cover;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 60px;
+
+  .top {
+    .wrapper {
+      padding: 10px 30px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      color: white;
+
+      .logo {
+        height: 200px;
+        margin-top: 50px;
+        z-index: 99;
+      }
+
+      h1 {
+        margin: 30px 0;
+      }
+    }
+  }
+
+  .container {
+    width: 550px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-around;
+    color: white;
+    background-color: rgb(0, 0, 0, 0.4);
+    border-radius: 10px;
+
+    .cover {
+      width: 100%;
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-around;
+      margin: 20px 0;
+
+      .title {
+        width: 100%;
+        h2 {
+          display: flex;
+          justify-content: left;
+          font-size: 50px;
+          font-weight: 600;
+          padding: 5px 25px;
+          text-align: left;
+        }
+      }
+      .buttons {
+        display: flex;
+
+        .icon {
+          color: white;
+        }
+
+        button {
+          height: 40px;
+          border-radius: 5px;
+          background-color: rgb(102, 3, 3, 0.4);
+          color: white;
+          border: none;
+          font-size: 16px;
+          font-weight: 500;
+          padding: 5px 15px;
+          margin: 15px 15px;
+          cursor: pointer;
+        }
+        button:hover {
+          background-color: $secondary-color;
+        }
+      }
+    }
+  }
+}

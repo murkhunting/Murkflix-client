@@ -23,7 +23,7 @@ function Admin() {
             </div>
           </Link>
           <Link to="/admin/movienew" className="link">
-            <button className="loginbutton">CREATE NEW MOVIE</button>
+            <button>CREATE NEW MOVIE</button>
           </Link>
           <Link to="/admin/listlist" className="link">
             <div className="cover">
@@ -32,7 +32,7 @@ function Admin() {
             </div>
           </Link>
           <Link to="/admin/listnew" className="link">
-            <button className="loginbutton">CREATE NEW LIST</button>
+            <button>CREATE NEW LIST</button>
           </Link>
         </BrowserRouter>
       </div>

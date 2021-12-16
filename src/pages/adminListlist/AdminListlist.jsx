@@ -3,10 +3,17 @@ import "./adminListlist.scss";
 import images from "../../assets/images";
 import { Link } from "react-router-dom";
 import { FaRegTrashAlt } from "react-icons/fa";
+import { IoChevronBack } from "react-icons/io5";
 
 function AdminListlist() {
   return (
     <div className="adminlistlist">
+      <Link to="/admin" className="link">
+        <div className="back">
+          <IoChevronBack className="icon" />
+          <h3>Back to Admin</h3>
+        </div>
+      </Link>
       <div className="top">
         <div className="wrapper">
           <img className="logo" src={images.logo1} alt="" />

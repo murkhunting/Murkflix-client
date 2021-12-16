@@ -10,8 +10,8 @@ function adminMovielist() {
     <div className="adminmovielist">
       <Link to="/admin" className="link">
         <div className="back">
-          <IoChevronBack />
-          Back to Admin
+          <IoChevronBack className="icon" />
+          <h3>Back to Admin</h3>
         </div>
       </Link>
 

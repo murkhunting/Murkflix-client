@@ -16,6 +16,20 @@
   align-items: center;
   padding-bottom: 60px;
 
+  .back {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    color: white;
+    z-index: 2;
+    .icon {
+      font-size: 25px;
+      margin-right: 10px;
+    }
+  }
+
   .top {
     .wrapper {
       padding: 10px 30px;

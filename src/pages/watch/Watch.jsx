@@ -6,10 +6,10 @@ import { Link, useLocation } from "react-router-dom";
 function Watch() {
   const location = useLocation();
   const movie = location.movie;
-  console.log(movie);
+  console.log(location);
   return (
     <div className="watch">
-      <Link to="/">
+      <Link to="/" className="link">
         <div className="back">
           <IoArrowBack />
           Home

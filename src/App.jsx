@@ -36,20 +36,20 @@ function App() {
           path="/login"
           element={!user ? <Login /> : <Navigate to="/" />}
         />
+        <Route path="/admin" element={<Admin />} />
+        <Route path="/admin/listlist" element={<AdminListlist />} />
+        <Route path="/admin/list/:id" element={<AdminList />} />
+        <Route path="/admin/listnew" element={<AdminListnew />} />
+        <Route path="/admin/movie/:id" element={<AdminMovie />} />
+        <Route path="/admin/movielist" element={<AdminMovielist />} />
+        <Route path="/admin/movienew" element={<AdminMovienew />} />
         {user && (
           <>
             <Route path="/movies" element={<Home type="movies" />} />
             <Route path="/series" element={<Home type="series" />} />
-            <Route path="/watch" element={<Watch />} />
+            <Route path="/watch/:id" element={<Watch />} />
           </>
         )}
-        <Route path="/admin" element={<Admin />} />
-        <Route path="/admin/listlist" element={<AdminListlist />} />
-        <Route path="/admin/list" element={<AdminList />} />
-        <Route path="/admin/listnew" element={<AdminListnew />} />
-        <Route path="/admin/movie" element={<AdminMovie />} />
-        <Route path="/admin/movielist" element={<AdminMovielist />} />
-        <Route path="/admin/movienew" element={<AdminMovienew />} />
       </Routes>
     </Router>
   );

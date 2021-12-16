@@ -3,7 +3,7 @@ import "./admin.scss";
 import images from "../../assets/images";
 import { BsPlayCircle } from "react-icons/bs";
 import { BsCardList } from "react-icons/bs";
-import { BrowserRouter, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 function Admin() {
   return (
@@ -15,26 +15,24 @@ function Admin() {
         </div>
       </div>
       <div className="container">
-        <BrowserRouter>
-          <Link to="/admin/movielist" className="link">
-            <div className="cover">
-              <BsPlayCircle className="icon" />
-              <h2>ALL MOVIES</h2>
-            </div>
-          </Link>
-          <Link to="/admin/movienew" className="link">
-            <button>CREATE NEW MOVIE</button>
-          </Link>
-          <Link to="/admin/listlist" className="link">
-            <div className="cover">
-              <BsCardList className="icon" />
-              <h2>ALL LISTS</h2>
-            </div>
-          </Link>
-          <Link to="/admin/listnew" className="link">
-            <button>CREATE NEW LIST</button>
-          </Link>
-        </BrowserRouter>
+        <Link to="/admin/movielist" className="link">
+          <div className="cover">
+            <BsPlayCircle className="icon" />
+            <h2>ALL MOVIES</h2>
+          </div>
+        </Link>
+        <Link to="/admin/movienew" className="link">
+          <button>CREATE NEW MOVIE</button>
+        </Link>
+        <Link to="/admin/listlist" className="link">
+          <div className="cover">
+            <BsCardList className="icon" />
+            <h2>ALL LISTS</h2>
+          </div>
+        </Link>
+        <Link to="/admin/listnew" className="link">
+          <button>CREATE NEW LIST</button>
+        </Link>
       </div>
     </div>
   );

@@ -17,6 +17,7 @@ import AdminListnew from "./pages/adminListnew/AdminListnew";
 import AdminMovie from "./pages/adminMovie/AdminMovie";
 import AdminMovielist from "./pages/adminMovielist/AdminMovielist";
 import AdminMovienew from "./pages/adminMovienew/AdminMovienew";
+import ErrorPage from "./pages/error/Error";
 
 function App() {
   const user = true;
@@ -50,6 +51,7 @@ function App() {
             <Route path="/watch/:id" element={<Watch />} />
           </>
         )}
+        <Route path="*" element={<ErrorPage />} />
       </Routes>
     </Router>
   );

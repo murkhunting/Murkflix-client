@@ -20,7 +20,7 @@ function AdminMovie() {
         </div>
       </div>
       <form className="container">
-        <h1>{serie ? "Edit SERIE info:" : "Edit MOVIE info:"}</h1>
+        <h1>{serie ? "Edit SERIE info" : "Edit MOVIE info"}</h1>
         <div className="cover">
           <h2>Title:</h2>
           <input type="text" placeholder="" />
@@ -58,7 +58,7 @@ function AdminMovie() {
           <input type="text" placeholder="" />
         </div>
 
-        <Link to="/admin/listlist" className="link">
+        <Link to="/admin/movielist" className="link">
           <button>EDIT INFO</button>
         </Link>
       </form>

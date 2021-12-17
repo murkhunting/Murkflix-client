@@ -20,7 +20,7 @@ import AdminMovienew from "./pages/adminMovienew/AdminMovienew";
 import ErrorPage from "./pages/error/Error";
 
 function App() {
-  const user = true;
+  const user = false;
   return (
     <Router>
       <Routes>

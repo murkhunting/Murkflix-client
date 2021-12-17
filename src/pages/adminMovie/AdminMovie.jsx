@@ -8,7 +8,7 @@ function AdminMovie() {
   const serie = false;
   return (
     <div className="adminmovie">
-      <Link to="/admin" className="link">
+      <Link to="/admin/movielist" className="link">
         <div className="back">
           <IoChevronBack className="icon" />
           <h3>Back</h3>

@@ -7,7 +7,7 @@ import { IoChevronBack } from "react-icons/io5";
 function AdminList() {
   return (
     <div className="adminlist">
-      <Link to="/admin" className="link">
+      <Link to="/admin/listlist" className="link">
         <div className="back">
           <IoChevronBack className="icon" />
           <h3>Back</h3>

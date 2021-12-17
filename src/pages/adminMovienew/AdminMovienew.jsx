@@ -19,7 +19,7 @@ function AdminMovienew() {
         </div>
       </div>
       <form className="container">
-        <h1>Create a NEW LIST</h1>
+        <h1>Create a NEW MOVIE</h1>
         <div className="cover">
           <h2>Title of the Movie:</h2>
           <input type="text" placeholder="Enter the list title..." />

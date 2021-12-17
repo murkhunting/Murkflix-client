@@ -26,6 +26,7 @@ function SignUp() {
         </div>
       </div>
       <div className="container">
+        <h1>- MURKFLIX -</h1>
         <h1>UNLIMITED MOVIES, TV SHOWS AND MORE.</h1>
         <h2>Watch anywhere. Cancel anytime.</h2>
         <p>
